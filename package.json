@@ -1,0 +1,26 @@
+{
+  "name": "paginawebcafeteria",
+  "version": "1.0.0",
+  "description": "Primer proyecto SASS, Gulp, CSS Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneAlpacaMore/PaginaWebCafeteria.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Grid",
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Hiram Mendoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OneAlpacaMore/PaginaWebCafeteria/issues"
+  },
+  "homepage": "https://github.com/OneAlpacaMore/PaginaWebCafeteria#readme"
+}
