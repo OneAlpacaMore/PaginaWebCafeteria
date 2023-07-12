@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/OneAlpacaMore/PaginaWebCafeteria/issues"
   },
-  "homepage": "https://github.com/OneAlpacaMore/PaginaWebCafeteria#readme"
+  "homepage": "https://github.com/OneAlpacaMore/PaginaWebCafeteria#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
