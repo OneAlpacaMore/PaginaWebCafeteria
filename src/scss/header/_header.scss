@@ -1,3 +1,45 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
 .header {
-    color: black;
+    padding: 5rem 0;
+    position: relative;
+    @include mix.tablet { 
+        min-height: 70rem;
+     }
+
+  @include mix.desktop { 
+        background-color: red;
+   }
+
+    &::before {
+        content: '';
+        background-color: var.$negro;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.60;
+    }
+
+    .contenido-header {
+       position: relative;
+
+       h1 {
+        text-align: center;
+        color: var.$blanco;
+        text-transform: uppercase;
+        margin-top: var.$separacion;
+        @include mix.tablet { 
+            margin-top: calc(var.$separacion*2);
+         }
+       }
+    }
+}
+
+//header de cada página
+
+.header-inicio {
+    background-image: url('/build/img/header_inicio.jpg');
 }
