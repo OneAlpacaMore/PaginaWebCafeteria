@@ -1,0 +1,17 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.contenido-principal {
+    background-color: var.$blanco;
+    padding: 5rem 2rem;
+    width: 100%;
+    @include mix.tablet { 
+        padding: 10rem;
+        width: 95%;
+        margin-top: -10rem;
+        position: relative;
+     }
+     h2 {
+        margin-bottom: 0;
+     }
+}

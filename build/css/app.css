@@ -320,11 +320,13 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #EBE7DE;
 }
 
 p {
   color: #000;
   font-size: 2rem;
+  line-height: 2;
 }
 
 .contenedor {
@@ -342,8 +344,18 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 h1, h2, h3 {
   margin: 0 0 5rem 0;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h1 {
@@ -352,6 +364,22 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
+  color: #5E311E;
+}
+h2 span {
+  color: #C39C63;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url(/build/img/cafe.svg);
+  background-position: center;
+  background-size: 10rem;
 }
 
 h3 {
@@ -461,5 +489,44 @@ a.activo {
   .barra .logo {
     width: 20rem;
     margin: 0;
+  }
+}
+
+.contenido-principal {
+  background-color: #FFF;
+  padding: 5rem 2rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    padding: 10rem;
+    width: 95%;
+    margin-top: -10rem;
+    position: relative;
+  }
+}
+.contenido-principal h2 {
+  margin-bottom: 0;
+}
+
+.iconos {
+  margin-top: 5rem;
+}
+.iconos .listado-iconos li img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.iconos .listado-iconos li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5E311E;
+}
+@media (min-width: 768px) {
+  .iconos .listado-iconos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 5rem;
+       -moz-column-gap: 5rem;
+            column-gap: 5rem;
   }
 }

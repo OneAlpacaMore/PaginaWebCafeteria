@@ -1,0 +1,25 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.iconos {
+    margin-top: 5rem;
+
+    .listado-iconos {
+        li {
+            img {
+                margin: 0 auto;
+                width: 12rem;
+            }
+
+            p {
+                font-family: var.$fuente_cursiva;
+                font-size: 3.2rem;
+                color: var.$primario;
+            }
+        }
+
+        @include mix.tablet {
+            @include mix.grid(3, 1fr);
+        }
+    }
+}
