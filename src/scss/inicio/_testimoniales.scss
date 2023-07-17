@@ -1,0 +1,26 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.nuestros-testimoniales {
+    padding: 10rem 2rem;
+
+    @include mix.tablet { 
+        padding: 10rem;
+     }
+}
+
+.testimonial {
+    background-color: var.$cafeClaro;
+    padding: 2rem 4rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    
+    .autor {
+        text-align: right;
+        font-size: 2.4rem;
+        color: var.$primario;
+        font-family: var.$fuente_cursiva;
+    }
+}
+
