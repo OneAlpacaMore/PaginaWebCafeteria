@@ -4,6 +4,8 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 //PLUMBER
 const plumber = require('gulp-plumber');
@@ -22,8 +24,10 @@ function css(done) {
 
     src('src/scss/app.scss') //1
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/css')) //2
 
 
@@ -33,8 +37,8 @@ function css(done) {
 
 function imagenes() {
     return src('src/img/**/*')
-    .pipe( imagenmin( { optimizationLevel: 3 } ) )
-    .pipe( dest('build/img') )
+        .pipe(imagenmin({ optimizationLevel: 3 }))
+        .pipe(dest('build/img'))
 }
 
 function versionWebp() {
@@ -42,8 +46,8 @@ function versionWebp() {
         quality: 50
     }
     return src('src/img/**/*.{png,jpg}')
-    .pipe( webp() )
-    .pipe( dest('build/img') );
+        .pipe(webp())
+        .pipe(dest('build/img'));
 }
 
 function versionAvif() {
@@ -51,8 +55,8 @@ function versionAvif() {
         quality: 50
     }
     return src('src/img/**/*.{png,jpg}')
-    .pipe( avif( calidad ) )
-    .pipe( dest('build/img') );
+        .pipe(avif(calidad))
+        .pipe(dest('build/img'));
 }
 //tomar los cambios en tiempo real en vez de ejecutar el scss en consola
 function dev() {
