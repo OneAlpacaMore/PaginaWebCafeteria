@@ -19,7 +19,7 @@
         }
 
         @include mix.tablet {
-            @include mix.grid(3, 1fr);
+            @include mix.grid(3, 1fr, 5rem);
         }
     }
 }

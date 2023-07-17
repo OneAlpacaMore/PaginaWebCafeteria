@@ -18,8 +18,8 @@
     }
 }
 
-@mixin grid( $columnas, $espaciado) {
+@mixin grid( $columnas, $size, $espaciado) {
     display: grid;
-    grid-template-columns: repeat($columnas, $espaciado);
-    column-gap: 5rem;
+    grid-template-columns: repeat($columnas, $size);
+    gap: $espaciado;
 }
