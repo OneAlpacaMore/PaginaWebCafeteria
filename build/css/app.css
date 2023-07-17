@@ -419,6 +419,8 @@ h3 {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -457,6 +459,10 @@ h3 {
 
 .header-inicio {
   background-image: url("/build/img/header_inicio.jpg");
+}
+
+.header-nosotros {
+  background-image: url(/build/img/header_nosotros.jpg);
 }
 
 .nav-principal {
@@ -743,4 +749,37 @@ a.activo {
   font-size: 2.4rem;
   color: #5E311E;
   font-family: "Bona Nova", serif;
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.contenido-nosotros .imagen {
+  margin-bottom: 5rem;
+}
+.contenido-nosotros .imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #FFF;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+.contenido-nosotros .texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5E311E;
+  font-size: 2rem;
+}
+
+.contenido-principal {
+  width: 95%;
 }
