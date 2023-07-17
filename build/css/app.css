@@ -462,7 +462,11 @@ h3 {
 }
 
 .header-nosotros {
-  background-image: url(/build/img/header_nosotros.jpg);
+  background-image: url("/build/img/header_nosotros.jpg");
+}
+
+.header-proceso {
+  background-image: url("/build/img/header_proceso.jpg");
 }
 
 .nav-principal {
@@ -778,6 +782,44 @@ a.activo {
   padding: 1rem;
   border-left: 0.5rem solid #5E311E;
   font-size: 2rem;
+}
+
+.contenido-principal {
+  width: 95%;
+}
+
+@media (min-width: 1024px) {
+  .proceso-cafe {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .proceso-cafe:last-of-type {
+    margin-bottom: 0;
+  }
+  .proceso-cafe:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+.proceso-cafe .imagen,
+.proceso-cafe .texto {
+  flex: 1;
+}
+.proceso-cafe .texto {
+  margin-top: 1rem;
+}
+.proceso-cafe .texto h3 {
+  margin: 0;
+  text-align: left;
+  color: #5E311E;
+}
+.proceso-cafe .texto h3::after {
+  content: "";
+  background-color: #C39C63;
+  display: block;
+  width: 50%;
+  height: 4px;
 }
 
 .contenido-principal {
